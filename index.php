@@ -236,7 +236,7 @@ $short_description = "Change this text to your own short description of the prod
                   var send_value_address = document.getElementById("send_value_address").value;
                   var send_mount = document.getElementById("send_mount").value;
 
-                  var post_response = $.ajax({type: "GET", url: "api.php?pay=<?php echo $dnotes_address; ?>&invoice=<?php echo $invoice_number; ?>", async: false}).responseText;
+                  var post_response = $.ajax({type: "GET", url: "https://abe.dnotescoin.com/chain/DNotes/q/invoice/<?php echo $dnotes_address; ?>+<?php echo $invoice_number; ?>", async: false}).responseText;
                   var res_data = post_response.split(",");
                   console.log(res_data[0]);
                   console.log(res_data[1]);
